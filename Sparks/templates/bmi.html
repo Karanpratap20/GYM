@@ -1,0 +1,59 @@
+{% extends "base2.html" %}
+
+{% load static %}
+
+{% block title %}BMI{% endblock title %}
+
+{% block css %}<link rel="stylesheet" href="static/bmi.css">{% endblock css %}
+
+{% block body %}
+<section class="main">
+    <div class="calculator">
+        <h1>BMI Calculator</h1>
+        <div class="input-box">
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" placeholder="Enter your height">
+        </div>
+        <div class="input-box">
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" placeholder="Enter your weight"> 
+        </div>
+        
+        
+        <button class="btn" onclick="calculateBMI()">Calculate BMI</button>
+        <div id="result"></div>
+    </div>
+</section>
+
+  <script>
+    function calculateBMI() {
+      const height = parseFloat(document.getElementById('height').value);
+      const weight = parseFloat(document.getElementById('weight').value);
+
+      if (isNaN(height) || isNaN(weight) || height <= 0 || weight <= 0) {
+        document.getElementById('result').innerText = 'Please enter valid height and weight values.';
+        return;
+      }
+
+      const bmi = calculateMetricBMI(height, weight);
+      const resultText = `Your BMI is ${bmi.toFixed(2)}. ${getBMICategory(bmi)}`;
+      document.getElementById('result').innerText = resultText;
+    }
+
+    function calculateMetricBMI(height, weight) {
+      return weight / ((height / 100) ** 2);
+    }
+
+    function getBMICategory(bmi) {
+      if (bmi < 18.5) {
+        return 'You are underweight.';
+      } else if (bmi >= 18.5 && bmi < 25) {
+        return 'You have a normal weight.';
+      } else if (bmi >= 25 && bmi < 30) {
+        return 'You are overweight.';
+      } else {
+        return 'You are obese.';
+      }
+    }
+  </script>
+{% endblock body %}

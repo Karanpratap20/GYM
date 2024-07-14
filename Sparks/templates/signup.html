@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equive="X-UA-Compatiblr" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "log.css" %}">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <div class="wrapper">
+        <form method="post" action="/signup">
+        {% csrf_token %}
+            <h1>SIGN IN</h1>
+            <div class="input-box">
+                <input type="text" name="username" placeholder="Username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="text" name="fname" placeholder="First Name" required>
+            </div>
+            <div class="input-box">
+                <input type="text" name="lname" placeholder="Last Name" required>
+            </div>
+            <div class="input-box">
+                <input type="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="input-box">
+                <input type="password" name="pass1" placeholder="Password" required>
+                <i class='bx bxs-lock-alt'></i> 
+            </div>
+            <div class="input-box">
+                <input type="password" name="pass2" placeholder="Confirm Password" required>
+                <i class='bx bxs-lock-alt'></i> 
+            </div>
+            <button class="btn" type="submit">Create Account</button>
+            <div class="register-link">
+                <p>Login here!   <a href="/login">Login</a></p>
+            </div>
+            <div class="register-link">
+                <p><a href="/">Main Menu</a></p>
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>

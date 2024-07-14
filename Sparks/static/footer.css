@@ -1,0 +1,60 @@
+footer{
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+footer .services ul{
+    list-style-type: none;
+}
+footer .services li{
+    padding: 10px 0px;
+}
+footer .services h5{
+    padding: 10px 0px;
+    font-size: 1.2em;
+}
+footer .serices{
+    margin: 20px;
+}
+footer a{
+    color: white;
+}
+footer .contact-info p{
+    padding: 10px 0px; 
+}
+footer .contact-form{
+    padding: 20px 0px;
+}
+footer .contact-form input{
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0px;
+}
+footer .contact-form button{
+    background-color: gray;
+    color: white;
+    padding: 15px;
+    display: inline-block;
+    text-decoration: none;
+    transition: box-shadow 0.5s;
+    margin: 10px 0px;
+    border: none;
+}
+footer .contact-form button:hover{
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.2);
+}
+
+@media screen and (min-width:750px) {
+    
+    footer .services,
+    footer .contact-info{
+        width: 46%;
+        display: inline-block;
+    }
+    footer .contact-form input{
+        width: 70%; 
+    }
+    footer .contact-form button{
+        width: 20%;
+    }
+}

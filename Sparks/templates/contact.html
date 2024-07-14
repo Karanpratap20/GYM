@@ -1,0 +1,34 @@
+{% extends "base2.html" %}
+
+{% load static %}
+
+{% block title %}Contact{% endblock title %}
+
+{% block css %}<link rel="stylesheet" href="static/contact.css">{% endblock css %}
+
+{% block body %}
+<section id="showcase">
+    <div class="text">
+        <h2>Contact Us</h2>
+    </div>
+</section> 
+<!-- Showcase -->
+<section id="get-in-touch">
+    <h2>Get in touch</h2>
+    <p>We are available 24X7 email. You can also use our quick contact form to ask a question about our services.</p>
+    <form method="post" action="/contact">
+    {% csrf_token %}
+        <input type="text" id="name" name="name" placeholder="First Name">
+        <input type="tel" id="phone" name="phone" placeholder="Phone No.">
+        <input type="email" id="email" name="email" placeholder="Email">
+        <textarea id="desc" name="desc"placeholder="Your Message"></textarea>
+        <button class="call-to-action" type="submit">Send Message</button>
+    </form>
+</section>
+
+<section id="map">
+    <div style="max-width:100%;overflow:hidden;color:red;width:100%;height:500px;"><div id="google-maps-display" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Spark+Gym,+Block+Road+Area,+Bhimtal,+Uttarakhand,+India&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><a class="the-googlemap-enabler" rel="nofollow" href="https://www.bootstrapskins.com/themes" id="grab-map-authorization">premium bootstrap themes</a><style>#google-maps-display img{max-width:none!important;background:none!important;font-size: inherit;font-weight:inherit;}</style></div>
+</section>
+{% endblock body %}
+
+ 

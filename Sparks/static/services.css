@@ -1,0 +1,222 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #edeff0;
+}
+header {
+    background-color: white;
+}
+header a{
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+header #logo{
+    font-size: 1.5em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+header nav li{
+    display: inline-block;
+}
+header nav a{
+    transition: background-color 0.5s ease-in-out;
+}
+header nav a:hover{
+    background-color: rgba(0,0,0,0.1);
+}
+header .active{
+    background-color: rgba(0,0,0,0.2);
+}
+/* header */
+
+#showcase{
+    min-height: 450px;
+    background-image: url(../img/x1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    background-position: center;
+}
+#showcase .text{
+    background-color: rgba(0,0,0,0.3);
+    position: absolute;
+    width: 100%;
+    bottom: 200px;
+}
+#showcase .text h2{
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+/* ****Showcase */
+
+#services{
+    color: #fff;
+    background-color: grey;
+    text-align: center;
+    padding: 10px;
+    padding-bottom: 50px;
+}
+#services h2{
+    padding: 20px;
+    font-size: 1.5em;
+}
+.service{
+    margin: 20px;
+}
+.service h3,
+.service p{
+    padding: 10px;
+}
+.service h3{
+    font-size: 1.4em;
+    border-bottom: 1px solid white;
+}
+.service.one {
+    background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.7)), url(../img/x2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.service.two{
+    background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.7)), url(../img/x3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.service.three{
+    background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.7)), url(../img/x4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.call-to-action{
+    text-align: center;
+}
+.call-to-action a{
+    text-decoration: none;
+    color: white;
+    background-color: gray;
+    display: inline-block;
+    width: 90%;
+    padding: 15px;
+    margin: 15px 0px;
+    border-radius: 50px 0px;
+    transition: all 0.5s;
+}
+.call-to-action a:hover{
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.2);
+}
+/* ***few words */
+
+
+
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+footer .services ul{
+    list-style-type: none;
+}
+footer .services li{
+    padding: 10px 0px;
+}
+footer .services h5{
+    padding: 10px 0px;
+    font-size: 1.2em;
+}
+footer .serices{
+    margin: 20px;
+}
+footer a{
+    color: white;
+}
+footer .contact-info p{
+    padding: 10px 0px; 
+}
+footer .contact-form{
+    padding: 20px 0px;
+}
+footer .contact-form input{
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0px;
+}
+footer .contact-form button{
+    background-color: gray;
+    color: white;
+    padding: 15px;
+    display: inline-block;
+    text-decoration: none;
+    transition: box-shadow 0.5s;
+    margin: 10px 0px;
+    border: none;
+}
+footer .contact-form button:hover{
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.2);
+}
+/* ***footer */
+
+
+/* media queries */
+
+@media screen and (min-width:750px) {
+    header{
+        text-align: center;
+    }
+    header #logo{
+        display: inline-block;
+        width: 30%;
+        padding: 10px;
+    }
+    header nav{
+        display: inline-block;
+        width: 60%;
+    }
+    
+    .call-to-action{
+        clear: both;
+    }
+    .service{
+        float: left;
+        width: 48.5%;
+        margin: 20px 0px;
+        padding: 20px;
+    }
+    .services-container{
+        max-width: 700px;
+        margin: auto;
+    }
+    .service.one{
+        width: 100%;
+        margin: 0px;
+    }
+    .service.two{
+        margin-right: 20px;
+    }
+    .services-container:after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    footer .services,
+    footer .contact-info{
+        width: 46%;
+        display: inline-block;
+    }
+    footer .contact-form input{
+        width: 70%; 
+    }
+    footer .contact-form button{
+        width: 20%;
+    }
+}
